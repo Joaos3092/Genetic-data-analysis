@@ -7,7 +7,7 @@ As the amount of information increases, so must the methods we use to explore, a
 
 In recent years i have had the privilege of working on one of the largest genetic data sets to date. I would like to leave here some of the tips and tricks i learned during this project. This repository consists in a series of Jupyter notebooks, each exploring some method or applications i found particularly useful.
 
-[NBviewer](https://nbviewer.jupyter.org/) supports the 2D images produced in the scripts.
+[NBviewer](https://nbviewer.jupyter.org/) supports the 2D images produced in the scripts (copy-paste the url of a notebook onto the tab provided).
 
 Not interactive plots however.. 
 
