@@ -9,6 +9,6 @@ In recent years i have had the privilege of working on one of the largest geneti
 
 [NBviewer](https://nbviewer.jupyter.org/) supports the 2D images produced in the scripts.
 
-Not 3D representations however.
+Not interactive plots however.. 
 
 
