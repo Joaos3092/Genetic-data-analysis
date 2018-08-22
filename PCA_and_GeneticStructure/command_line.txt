@@ -1,0 +1,14 @@
+qsub -N PCA_Eigen_test -q normal.q -V -b y python -u Sample_size_analysis.py \
+--Eigen \
+--Npops 4 \
+--range 100,150 \
+--iter 20 
+
+qsub -N PCA_8eigen -q long.q -V -b y python -u Sample_size_analysis.py \
+--ncomp 8 \
+--range 50,1000
+
+qsub -N PCA_Scale -q long.q -V -b y python -u Sample_size_analysis.py \
+--Scale \
+--ncomp 8 \
+--range 50,1000
