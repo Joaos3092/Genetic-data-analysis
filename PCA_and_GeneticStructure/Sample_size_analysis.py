@@ -138,14 +138,13 @@ def controled_fsts(vector_lib,Eigen,length_haps,Scale,N_pops,n_comp,Iter,N_sims)
     dist_PC_bias= {x:[] for x in range(n_comp)}
     dist_PC_corrected= {x:[] for x in range(n_comp)}
     
+    ### store increemental PC distances
+    dist_increment_even= {x:[] for x in range(1,n_comp)}
+    dist_increment_bias= {x:[] for x in range(1,n_comp)}    
+    
     ### store fsts
     fst_store= []
-
-    ### store Pearson's r comparing gen_diffs and feature space diffs across scenarios
-    biased_pears= []
-    corrected_pears= []
-    unbiased_pears= []
-
+    
     ### triangular matrices extract.
     iu1= np.triu_indices(N_pops,1) # for centroid comparison
 
@@ -208,8 +207,12 @@ def controled_fsts(vector_lib,Eigen,length_haps,Scale,N_pops,n_comp,Iter,N_sims)
         for PC in range(unbias_centroids.shape[1]):
             unbias_PC_dist= pairwise_distances(unbias_centroids[:,PC].reshape(-1,1),metric= 'euclidean')
             unbias_PC_dist= unbias_PC_dist[iu1]
-            #unbias_PC_dist= scale(unbias_PC_dist)
             dist_PC_even[PC].extend(unbias_PC_dist)
+            
+            if PC > 0:
+                unbias_increment_dist= pairwise_distances(unbias_centroids[:,:PC],metric= 'euclidean')
+                unbias_increment_dist= unbias_increment_dist[iu1]
+                dist_increment_even[PC].extend(unbias_increment_dist)            
 
         #################################################
         ############## biased sample
@@ -251,8 +254,12 @@ def controled_fsts(vector_lib,Eigen,length_haps,Scale,N_pops,n_comp,Iter,N_sims)
         for PC in range(bias_centroids.shape[1]):
             bias_PC_dist= pairwise_distances(bias_centroids[:,PC].reshape(-1,1),metric= 'euclidean')
             bias_PC_dist= bias_PC_dist[iu1]
-            #bias_PC_dist= scale(bias_PC_dist)
             dist_PC_bias[PC].extend(bias_PC_dist)
+            
+            if PC > 0:
+                bias_increment_dist= pairwise_distances(bias_centroids[:,:PC],metric= 'euclidean')
+                bias_increment_dist= bias_increment_dist[iu1]
+                dist_increment_bias[PC].extend(bias_increment_dist)
 
         ###############################################################"
         ################## bias correct
@@ -281,11 +288,11 @@ def controled_fsts(vector_lib,Eigen,length_haps,Scale,N_pops,n_comp,Iter,N_sims)
         corrected_pairwise
     ]).T
     
-    ### Pearson's even vs. corrected
+    ### PC-wise Pearson's even vs. corrected
     corrected_PCs= [length_haps,N_pops]
     corrected_PCs.extend([pearsonr(dist_PC_even[x],dist_PC_corrected[x])[0] for x in dist_PC_even.keys()])
     
-    ### Pearson's even vs. bias
+    ### PCwise Pearson's even vs. bias
     bias_PCs= [length_haps,N_pops]
     bias_PCs.extend([pearsonr(dist_PC_even[x],dist_PC_bias[x])[0] for x in dist_PC_even.keys()])
     
@@ -293,7 +300,17 @@ def controled_fsts(vector_lib,Eigen,length_haps,Scale,N_pops,n_comp,Iter,N_sims)
     pearsons= [pearsonr(fst_store,t[:,x])[0] for x in range(t.shape[1])]
     Factors= [length_haps, N_pops]
     Factors.extend(pearsons)
-    return Factors, bias_PCs, corrected_PCs
+    
+    ### Pearson's incremental distances
+    #### unbiased
+    unbias_increment= [length_haps,N_pops]
+    unbias_increment.extend([pearsonr(fst_store,dist_increment_even[x])[0] for x in dist_PC_even.keys()])
+    
+    #### biased
+    bias_increment= [length_haps,N_pops]
+    bias_increment.extend([pearsonr(fst_store,dist_increment_bias[x])[0] for x in dist_PC_even.keys()])
+    
+    return Factors, bias_PCs, corrected_PCs, unbias_increment, bias_increment
 
 
 
@@ -308,7 +325,7 @@ length_range= [int(x) for x in args.range.split(',')]
 L= max(length_range)
 
 import itertools as it
-n= 25
+n= 50
 steps_t= 15
 
 # Vary a (beta distribution parameter).
@@ -379,10 +396,13 @@ Pears= []
 bias_PC_pears= []
 corrected_PC_pears= []
 
+even_increment_pears= []
+bias_increment_pears= []
+
 for legos in range(length_range[0],length_range[1],length_step):
     
     for pop in range(3,N_pops):
-        correlates, bias_pcs, corrected_pcs= controled_fsts(vector_lib,Eigen,legos,Scale,pop,n_comp,Iter,N_sims)
+        correlates, bias_pcs, corrected_pcs, even_increment, bias_increment= controled_fsts(vector_lib,Eigen,legos,Scale,pop,n_comp,Iter,N_sims)
         
         print('Npops: {}; L: {}'.format(pop,legos))
         
@@ -390,6 +410,9 @@ for legos in range(length_range[0],length_range[1],length_step):
         
         bias_PC_pears.append(bias_pcs)
         corrected_PC_pears.append(corrected_pcs)
+        even_increment_pears.append(even_increment)
+        bias_increment_pears.append(bias_increment)
+        
         Pears.append(deviates)
 
 
@@ -431,6 +454,23 @@ Output.close()
 #### Even to corrected distances, PC-wise
 
 filename= 'Sampling_MScorr_PC-wise_pears_' + str(args.ncomp) + 'PC_' + 'Eigen=' + str(Eigen) + '_Scaled=' + str(Scale) + '.txt'
+Output= open(filename,'w')
+
+
+Output.write('Size\tNpops\t' + '\t'.join(['PC' + str(x) for x in range(args.ncomp)]))
+
+Output.write('\n')
+
+for liable in corrected_PC_pears:
+    Output.write('\t'.join([str(x) for x in liable]))
+    Output.write('\n')
+
+Output.close()
+
+##### Fst to biased distances, PC-Increment
+
+
+filename= 'Sampling_Bias_PCincrement_pears_' + str(args.ncomp) + 'PC_' + 'Eigen=' + str(Eigen) + '_Scaled=' + str(Scale) + '.txt'
 Output= open(filename,'w')
 
 
