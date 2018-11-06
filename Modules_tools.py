@@ -1,3 +1,24 @@
+import numpy as np
+import pandas as pd
+import itertools as it
+
+import scipy
+
+from sklearn.neighbors import KernelDensity
+from sklearn.decomposition import PCA
+from sklearn.model_selection import GridSearchCV
+from sklearn.cluster import estimate_bandwidth
+from sklearn.cluster import MeanShift, estimate_bandwidth
+
+import re
+import matplotlib.pyplot as plt
+
+from matplotlib.collections import BrokenBarHCollection
+
+import collections
+
+def recursively_default_dict():
+        return collections.defaultdict(recursively_default_dict)
 
 
 ######################################################################################
@@ -52,12 +73,38 @@ def read_Darwin(darwin_file):
     return gen, Names
 
 
+def OriginbySNMF(Geno_Q,t):
+    """
+    Classes individuals according to Group assignment by SNMF
+    using user provided threshold (.8 advised). returns dict.
+    """
+    Geneo = open(Geno_Q,"r")
+    Ind = 0
+    Groups = recursively_default_dict()
+    for line in Geneo:
+        line= line.split()
+        line= [float(x.strip("\n")) for x in line]
+        line= [x / sum(line) for x in line]
+        if Ind == 0:
+            Groups = {x:[] for x in range(len(line) + 1)}
+        bagged = 0
+        for value in range(len(line)):
+            if line[value] >= t:
+                Groups[value].append(line)
+                bagged += 1
+        if bagged == 0:
+            Groups[len(line)].append(line)
+        Ind += 1
+    return Groups
+
+
 
 ##########################################################################################
 ### Fst
 ### Calculate pairwise Fst based on frequency vectors selected.
 ### return total Fst
 def return_fsts(vector_lib,pops):
+    
     H= {pop: [1-(vector_lib[pop,x]**2 + (1 - vector_lib[pop,x])**2) for x in range(vector_lib.shape[1])] for pop in pops}
     Store= []
     for comb in it.combinations(pops,2):
@@ -513,6 +560,44 @@ def compress_ideo(df,chromosome_list):
     return new_set
 
 
+
+def compress_ideo_vII(df,Out,chromosome_list):
+    
+    new_set = []
+    
+    for CHR in range(len(chromosome_list)):
+        
+        Chr = int(re.search('Region_(.+?)_',chromosome_list[CHR]).group(1))
+        sub = df[df.chrom == chromosome_list[CHR]]
+        Coordinates = sorted(sub.start)
+        Size = sub.shape[0]
+        start = min(df.start)
+        First = sub.gieStain.iloc[0]
+        for index in range(len(Coordinates)):
+            row = sub[sub.start == Coordinates[index]]
+            if index == 0:
+                continue
+            if index == (Size - 1):
+                if row.gieStain.iloc[0] == First:
+                    new_set.append([chromosome_list[CHR],start,Out[Chr][max(df.start)],First])
+                else:
+                    new_set.append([chromosome_list[CHR],start,Out[Chr][max(df.start)],First])
+                    First = row.gieStain.iloc[0]
+                    start = row.start.iloc[0]
+                    new_set.append([chromosome_list[CHR],start,Out[Chr][max(df.start)],First])
+            else:
+                if row.gieStain.iloc[0] == First:
+                    continue
+                else:
+                    new_set.append([chromosome_list[CHR],start,row.start.iloc[0]-1,First])
+                    First = row.gieStain.iloc[0]
+                    start = row.start.iloc[0]
+    
+    new_set = pd.DataFrame(new_set,columns = ['chrom', 'start', 'end', 'gieStain'])
+    return new_set
+
+
+
 # Here's the function that we'll call for each dataframe (once for chromosome
 # ideograms, once for genes).  The rest of this script will be prepping data
 # for input to this function
@@ -547,7 +632,7 @@ def chromosome_collections(df, y_positions, height,  **kwargs):
         del df['width']
 
 
-def return_ideogram(ideo, out= True):
+def return_ideogram(ideo, chromosome_list, Comparison_threshold, Outlier_threshold, out= True):
     # Height of each ideogram
     chrom_height = 1
 
