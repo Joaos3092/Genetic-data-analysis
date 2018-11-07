@@ -4,7 +4,7 @@ Preparation for, and application of, local ancestry inference approaches to data
 controled sources. 
 
 Jupyter notebooks reproduce tests of classification at different genetic distances. samples IDs 
-are given probability distributions and sequences concatenated across tests.
+are attributed ancestry proportions and sequences concatenated across tests.
 
 
 **Notebook Admixture_simulations_Loter**
