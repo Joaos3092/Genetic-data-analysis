@@ -44,7 +44,7 @@ summarisation of population samples. In this context, given a sufficient number 
 the probability density function of its samples in PCA feature space. In Notebooks [2.](https://nbviewer.jupyter.org/github/SantosJGND/Genetic-data-analysis/blob/master/2.%20Local_classification.ipynb),
  [3.](https://nbviewer.jupyter.org/github/SantosJGND/Genetic-data-analysis/blob/master/3.%20Mislabelling.ipynb), [4.](https://nbviewer.jupyter.org/github/SantosJGND/Genetic-data-analysis/blob/master/4.%20X-material.ipynb),
   and [5.](https://nbviewer.jupyter.org/github/SantosJGND/Genetic-data-analysis/blob/master/5.%20Visualizing%20KDE.ipynb), the use of kernel
-density estimates ([KDE](https://github.com/SantosJGND/Genetic-data-analysis/Complementary_data/Complementarych6_Scott_DavidW_KernelDen.pdf)) for 
+density estimates ([KDE](https://github.com/SantosJGND/Genetic-data-analysis/Complementary_data/ch6_Scott_DavidW_KernelDen.pdf)) for 
 the characterisation and assignment of individual samples is explored. 
 
 
