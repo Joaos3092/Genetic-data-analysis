@@ -33,7 +33,7 @@ of all variables available to describe the subject of study.
 In the study of the variation of binary data, the simplest assumption is that of a binomial probability of observation at the smallest 
 unit of measurment available. In the case of genetic data, this unit is the single nucleotide polymorphism (SNP).
 
-Througout the notebooks provided, individuals are simulated as samples of L binary markers (0, 1, .., i), coded 0 and 1, of frequency *pi* 
+Througout the notebooks provided, individuals are simulated as samples of *L* binary markers (0, 1, .., i), coded 0 and 1, of frequency *pi* 
 within a given population *K*. Populations were simulated as multivariate Bernoulli variables *Sk*, where each variable *Ski* represents the 
 binomial probability of an event. We further assumed independent markers and modelled the distributions of allele frequencies *Sk* from the 
 Beta distribution, as an approximation of the stationary allele frequencies described in Williamson *et al.* (2004). Allele frequency vectors 
@@ -44,7 +44,7 @@ summarisation of population samples. In this context, given a sufficient number 
 the probability density function of its samples in PCA feature space. In Notebooks [2.](https://nbviewer.jupyter.org/github/SantosJGND/Genetic-data-analysis/blob/master/2.%20Local_classification.ipynb),
  [3.](https://nbviewer.jupyter.org/github/SantosJGND/Genetic-data-analysis/blob/master/3.%20Mislabelling.ipynb), [4.](https://nbviewer.jupyter.org/github/SantosJGND/Genetic-data-analysis/blob/master/4.%20X-material.ipynb),
   and [5.](https://nbviewer.jupyter.org/github/SantosJGND/Genetic-data-analysis/blob/master/5.%20Visualizing%20KDE.ipynb), the use of kernel
-density estimates ([KDE]((https://github.com/SantosJGND/Genetic-data-analysis/Complementary_data/Complementarych6_Scott_DavidW_KernelDen.pdf)) for 
+density estimates ([KDE](https://github.com/SantosJGND/Genetic-data-analysis/Complementary_data/Complementarych6_Scott_DavidW_KernelDen.pdf)) for 
 the characterisation and assignment of individual samples is explored. 
 
 
