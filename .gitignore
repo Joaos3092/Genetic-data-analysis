@@ -2,3 +2,7 @@ venv
 *.pyc
 .DS_store
 .env
+Dmatrices/Aro_8049287Chr8_DataMatrix.txt
+Dmatrices/Aus_21875129Chr8_DataMatrix.txt
+Dmatrices/Ind_1239331Chr8_DataMatrix.txt
+Dmatrices/SHjap_12704242Chr8_DataMatrix.txt
