@@ -1,4 +1,4 @@
-# Genetic-data-exploration
+# Stats Lab
 
 *Exploring and classifying genetic data.*
 
@@ -50,8 +50,33 @@ the characterisation and assignment of individual samples is explored.
 
 ## II. Population structure.
 
-- Notebooks: 6 - 
+Notebooks: 6 - 11
 
+The study of the relation of different descriptors and population structure requires the analysis of samples from as many different populations
+as possible. This section deals with organising simulations so as to easily control for population number, sample size and correlation. 
+
+- Notebook 6 describes the use of PCA to organise allele frequency vectors by genetic proximity, as measured in *Fst*.
+
+- Notebook 7 Describes the relation between the proximity of source populations and euclidian distances of sample projections in PCA space.
+The impact of sample size is studied.
+
+- Notebook 8 describes the use of PCA to infer genetic distances measured in *Fst*.
+
+- Notebooks 9 and 9b describe the use of KDE to extract a measure of distribution overlap. 
+
+- Notebook 10 and 11 explore the behaviour of Mean Shift classification under different patterns of structure.
+
+
+## III. Admixture.
+
+Notebooks 12 - 13
+
+This section extends on the analyses in Notebooks 2 through 5. The use of the KDE of known populations for the characterisation 
+of samples in scenarios containing outliers and cases of mislabelling is explored. 
+
+- Notebook 12 introduces individual IDs and admixture proportions to combine admixture and genetic structure.
+
+- Notebook 13 focuses on the identification of samples from non-reference sources under different structure parameters.
 
 [NBviewer](https://nbviewer.jupyter.org/) supports the 2D images produced in the scripts (copy-paste the url of a notebook onto the tab provided).
 
