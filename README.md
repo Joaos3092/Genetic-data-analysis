@@ -53,9 +53,12 @@ the characterisation and assignment of individual samples is explored.
 Notebooks: 6 - 11
 
 The study of the relation of different descriptors and population structure requires the analysis of samples from as many different populations
-as possible. This section deals with organising simulations so as to easily control for population number, sample size and correlation. 
+as possible ([Fig. 1]
+(https://github.com/SantosJGND/Stats_Lab/blob/master/Complementary_data/Ideo_order_Fst_example.png)).
+This section deals with organising simulations so as to easily control for population number, sample size and correlation. 
 
-- Notebook 6 describes the use of PCA to organise allele frequency vectors by genetic proximity, as measured in *Fst*.
+- Notebook 6 describes the use of PCA to organise allele frequency vectors by genetic proximity, as measured in *Fst* ([Fig. 2]
+(https://github.com/SantosJGND/Stats_Lab/blob/master/Complementary_data/Ideo_comparison.png)).
 
 - Notebook 7 Describes the relation between the proximity of source populations and euclidian distances of sample projections in PCA space.
 The impact of sample size is studied.
@@ -74,9 +77,11 @@ Notebooks 12 - 13
 This section extends on the analyses in Notebooks 2 through 5. The use of the KDE of known populations for the characterisation 
 of samples in scenarios containing outliers and cases of mislabelling is explored. 
 
-- Notebook 12 introduces individual IDs and admixture proportions to combine admixture and genetic structure.
+- Notebook 12 introduces individual IDs and admixture proportions to combine admixture and genetic structure ([Fig. 3]
+(https://github.com/SantosJGND/Stats_Lab/blob/master/Complementary_data/3way_example.png)).
 
-- Notebook 13 focuses on the identification of samples from non-reference sources under different structure parameters.
+- Notebook 13 focuses on the identification of samples from non-reference sources under different structure parameters ([Fig. 4]
+(https://github.com/SantosJGND/Stats_Lab/blob/master/Complementary_data/Supplemental_Figure_S11.png)).
 
 [NBviewer](https://nbviewer.jupyter.org/) supports the 2D images produced in the scripts (copy-paste the url of a notebook onto the tab provided).
 
