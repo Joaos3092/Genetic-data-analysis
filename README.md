@@ -19,7 +19,9 @@ Notebooks are organised in order of increasing complexity and, in most cases, of
 greater part by the need to study the relation between statistcis that describe structure in data. Metrics to describe structure vary
 across fields of research. Here, the focus is on the description of genetic data. 
 
-Use NBviewer directly to explore the [notebook library](https://nbviewer.jupyter.org/github/SantosJGND/Genetic-data-analysis/tree/master/)
+Use NBviewer directly to explore the [notebook library](https://nbviewer.jupyter.org/github/SantosJGND/Genetic-data-analysis/tree/master/). 
+[NBviewer](https://nbviewer.jupyter.org/) supports the 2D images produced in the scripts (copy-paste the url of a notebook onto the tab provided).
+
 
 ## I. Binary samples. Population distribution and identification.
 
@@ -78,9 +80,5 @@ of samples in scenarios containing outliers and cases of mislabelling is explore
 - Notebook 12 introduces individual IDs and admixture proportions to combine admixture and genetic structure ([Fig. 3](https://github.com/SantosJGND/Stats_Lab/blob/master/Complementary_data/3way_example.png)).
 
 - Notebook 13 focuses on the identification of samples from non-reference sources under different structure parameters ([Fig. 4](https://github.com/SantosJGND/Stats_Lab/blob/master/Complementary_data/Supplemental_Figure_S11.png)).
-
-[NBviewer](https://nbviewer.jupyter.org/) supports the 2D images produced in the scripts (copy-paste the url of a notebook onto the tab provided).
-
-Not interactive plots however.
 
 
