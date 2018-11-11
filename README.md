@@ -58,16 +58,24 @@ The study of the relation of different descriptors and population structure requ
 as possible ([Fig. 1](https://github.com/SantosJGND/Stats_Lab/blob/master/Complementary_data/Ideo_order_Fst_example.png)).
 This section deals with organising simulations so as to easily control for population number, sample size and correlation. 
 
-- Notebook 6 describes the use of PCA to organise allele frequency vectors by genetic proximity, as measured in *Fst* ([Fig. 2](https://github.com/SantosJGND/Stats_Lab/blob/master/Complementary_data/Ideo_comparison.png)).
+- [Notebook 6](https://nbviewer.jupyter.org/github/SantosJGND/Genetic-data-analysis/blob/master/6.%20A%20link%20to%20FSTs.ipynb)
+describes the use of PCA to organise allele frequency vectors by genetic proximity, as measured in *Fst* 
+([Fig. 2](https://github.com/SantosJGND/Stats_Lab/blob/master/Complementary_data/Ideo_comparison.png)).
 
-- Notebook 7 Describes the relation between the proximity of source populations and euclidian distances of sample projections in PCA space.
+- [Notebook 7](https://nbviewer.jupyter.org/github/SantosJGND/Genetic-data-analysis/blob/master/7.%20Machine%20Learning%20for%20Genomics.ipynb) 
+Describes the relation between the proximity of source populations and euclidian distances of sample projections in PCA space.
 The impact of sample size is studied.
 
-- Notebook 8 describes the use of PCA to infer genetic distances measured in *Fst*.
+- [Notebook 8](https://nbviewer.jupyter.org/github/SantosJGND/Genetic-data-analysis/blob/master/8.%20Controlling%20for%20size.ipynb)
+describes the use of PCA to infer genetic distances measured in *Fst*.
 
-- Notebooks 9 and 9b describe the use of KDE to extract a measure of distribution overlap. 
+- Notebooks [9](https://nbviewer.jupyter.org/github/SantosJGND/Genetic-data-analysis/blob/master/9.%20Conditional_variation.ipynb) 
+and [9b](https://nbviewer.jupyter.org/github/SantosJGND/Genetic-data-analysis/blob/master/9b.%20Conditional_Var%2C%20but%20using%20Pops.ipynb) 
+describe the use of KDE to extract a measure of distribution overlap. 
 
-- Notebook 10 and 11 explore the behaviour of Mean Shift classification under different patterns of structure.
+- Notebook [10](https://nbviewer.jupyter.org/github/SantosJGND/Genetic-data-analysis/blob/master/10.%20Indexing_MS.ipynb) 
+and [11](https://nbviewer.jupyter.org/github/SantosJGND/Genetic-data-analysis/blob/master/11.%20Visualising%20Overlaps.ipynb) 
+explore the behaviour of Mean Shift classification under different patterns of structure.
 
 
 ## III. Admixture.
@@ -77,8 +85,10 @@ Notebooks 12 - 13
 This section extends on the analyses in Notebooks 2 through 5. The use of the KDE of known populations for the characterisation 
 of samples in scenarios containing outliers and cases of mislabelling is explored. 
 
-- Notebook 12 introduces individual IDs and admixture proportions to combine admixture and genetic structure ([Fig. 3](https://github.com/SantosJGND/Stats_Lab/blob/master/Complementary_data/3way_example.png)).
+- [Notebook 12](https://nbviewer.jupyter.org/github/SantosJGND/Genetic-data-analysis/blob/master/12.%20Admixture%20simulations.ipynb) 
+introduces individual IDs and admixture proportions to combine admixture and genetic structure ([Fig. 3](https://github.com/SantosJGND/Stats_Lab/blob/master/Complementary_data/3way_example.png)).
 
-- Notebook 13 focuses on the identification of samples from non-reference sources under different structure parameters ([Fig. 4](https://github.com/SantosJGND/Stats_Lab/blob/master/Complementary_data/Supplemental_Figure_S11.png)).
+- [Notebook 13](https://nbviewer.jupyter.org/github/SantosJGND/Genetic-data-analysis/blob/master/13.%20Outliers_genetic_structure.ipynb) 
+focuses on the identification of samples from non-reference sources under different structure parameters ([Fig. 4](https://github.com/SantosJGND/Stats_Lab/blob/master/Complementary_data/Supplemental_Figure_S11.png)).
 
 
