@@ -92,6 +92,8 @@ introduces individual IDs and admixture proportions to combine admixture and gen
 - [Notebook 13](https://nbviewer.jupyter.org/github/SantosJGND/Genetic-data-analysis/blob/master/13.%20Outliers_genetic_structure.ipynb) 
 focuses on the identification of samples from non-reference sources under different structure parameters ([Fig. 4](https://github.com/SantosJGND/Stats_Lab/blob/master/Complementary_data/Supplemental_Figure_S11.png)).
 
+- [/LAI_interface](https://github.com/SantosJGND/Stats_Lab/tree/master/LAI_interface): analysis of simulated samples using Local Ancestry Inference software.
+
 - [Digits](https://github.com/SantosJGND/Digits): an aside on controlling for admixture proportions for many individuals as a function of 
 proxy genomic position.
 
