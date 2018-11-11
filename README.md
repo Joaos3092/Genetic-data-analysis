@@ -96,7 +96,7 @@ focuses on the identification of samples from non-reference sources under differ
 proxy genomic position.
 
 
-# References
+## References
 
 - Jiang CJ and Cockerham CC. 1987. Use of the multinomial Dirichlet model for analysis of subdivided genetic populations. Genetics 115(2): 363-366.
 
