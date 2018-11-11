@@ -83,7 +83,8 @@ explore the behaviour of Mean Shift classification under different patterns of s
 Notebooks 12 - 13
 
 This section extends on the analyses in Notebooks 2 through 5. The use of the KDE of known populations for the characterisation 
-of samples in scenarios containing outliers and cases of mislabelling is explored. 
+of samples in scenarios containing outliers and cases of mislabelling is explored. However, this time we will build on the infrastructure
+developed in Section II to compare classification output across structure and admixture scenarios.
 
 - [Notebook 12](https://nbviewer.jupyter.org/github/SantosJGND/Genetic-data-analysis/blob/master/12.%20Admixture%20simulations.ipynb) 
 introduces individual IDs and admixture proportions to combine admixture and genetic structure ([Fig. 3](https://github.com/SantosJGND/Stats_Lab/blob/master/Complementary_data/3way_example.png)).
