@@ -524,7 +524,7 @@ def Merge_class_mix(Ref_profiles,focus_indicies,Out,Diff_threshold,X_threshold):
 #########################################################
 ### Ideogram Processing
 
-def compress_ideo(df,chromosome_list):
+def compress_ideo(df,Out,chromosome_list):
     
     new_set = []
     
