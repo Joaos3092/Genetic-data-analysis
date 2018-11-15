@@ -86,10 +86,11 @@ This section extends on the analyses in Notebooks 2 through 5. The use of the KD
 of samples in scenarios containing outliers and cases of mislabelling is explored. However, this time we will build on the infrastructure
 developed in Section II to compare classification output across structure and admixture scenarios.
 
-- [Notebook 12](https://nbviewer.jupyter.org/github/SantosJGND/Genetic-data-analysis/blob/master/12.%20Admixture%20simulations.ipynb) 
+- [Notebook 12a](https://nbviewer.jupyter.org/github/SantosJGND/Genetic-data-analysis/blob/master/12a.%20Admixture%20simulations.ipynb) 
 introduces individual IDs and admixture proportions to combine admixture and genetic structure ([Fig. 3](https://github.com/SantosJGND/Stats_Lab/blob/master/Complementary_data/3way_example.png)).
 
-
+- [Notebook 12b](https://nbviewer.jupyter.org/github/SantosJGND/Stats_Lab/blob/master/12b.%20Inference_Admixed.ipynb) 
+KDE-based assignment of admixed scenarios.
 
 - [Notebook 13](https://nbviewer.jupyter.org/github/SantosJGND/Genetic-data-analysis/blob/master/13.%20Outliers_genetic_structure.ipynb) 
 focuses on the identification of samples from non-reference sources under different structure parameters ([Fig. 4](https://github.com/SantosJGND/Stats_Lab/blob/master/Complementary_data/Supplemental_Figure_S11.png)).
