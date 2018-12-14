@@ -38,7 +38,7 @@ unit of measurment available. In the case of genetic data, this unit is the sing
 Througout the notebooks provided, individuals are simulated as samples of *L* binary markers (0, 1, .., i), coded 0 and 1, of frequency *pi* 
 within a given population *K*. Populations were simulated as multivariate Bernoulli variables *Sk*, where each variable *Ski* represents the 
 binomial probability of an event. We further assumed independent markers and modelled the distributions of allele frequencies *Sk* from the 
-Beta distribution, as an approximation of the stationary allele frequencies described in Williamson *et al.* (2004, see Jiang and Cockerham 1990; Sawyer and Hartl 1992). ). Allele frequency vectors 
+Beta distribution (Tataru *et al.* 2017, see also Jiang and Cockerham 1990, Sawyer and Hartl 1992 and Williamson *et al.* 2004). Allele frequency vectors 
 of size *L* were sampled from the Beta distribution for various combinations of mean and variance of this distribution (see [Notebook 1](https://nbviewer.jupyter.org/github/SantosJGND/Genetic-data-analysis/blob/master/1.%20Generating_haplotypes.ipynb)).
 
 To the extent that individuals are defined as combinations observations of the same weight, principal component analysis (PCA) presents an intuitive
@@ -107,5 +107,7 @@ proxy genomic position ([Fig. 6](https://github.com/SantosJGND/Digits/blob/maste
 - Jiang CJ and Cockerham CC. 1987. Use of the multinomial Dirichlet model for analysis of subdivided genetic populations. Genetics **115**: 363-366.
 
 - Sawyer SA and Hartl DL. 1992. Population genetics of polymorphism and divergence. Genetics **132**: 1161-1176.
+
+- Tataru P, Simonsen M, Bataillon T, Hobolth A. 2017. Statistical inference in the Wright-fisher model using allele frequency data. *Syst. Biol.* **66**:e30–e46.
 
 - Williamson S, Fledel-Alon A and Bustamante CD. 2004. Population genetics of polymorphism and divergence for diploid selection models with arbitrary dominance. Genetics **168**: 463-475.
