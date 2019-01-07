@@ -45,7 +45,7 @@ summarisation of population samples. In this context, given a sufficient number 
 the probability density function of its samples in PCA feature space. In Notebooks **2**, **3**, **4** and **5**, the use of kernel density estimates 
 ([KDE](https://scikit-learn.org/stable/modules/density.html)) for the characterisation and assignment of individual samples is explored. 
 
-- [1. Generating samples](https://nbviewer.jupyter.org/github/SantosJGND/Genetic-data-analysis/blob/master/1.%20Generating_haplotypes.ipynb)).
+- [1. Generating samples](https://nbviewer.jupyter.org/github/SantosJGND/Genetic-data-analysis/blob/master/1.%20Generating_haplotypes.ipynb).
 - [2. Local classification](https://nbviewer.jupyter.org/github/SantosJGND/Genetic-data-analysis/blob/master/2.%20Local_classification.ipynb).
 - [3. Mislabelling](https://nbviewer.jupyter.org/github/SantosJGND/Genetic-data-analysis/blob/master/3.%20Mislabelling.ipynb).
 - [4. Outlier material](https://nbviewer.jupyter.org/github/SantosJGND/Genetic-data-analysis/blob/master/4.%20X-material.ipynb)
@@ -58,7 +58,7 @@ Notebooks: 6 - 11
 The study of the relation of different descriptors and population structure requires the analysis of samples from as many different populations
 as possible. In this section we begin by dealing with organising simulations so as to control for correlation (notebook **6**). We then build on
 the infrastructure created to explore the impact of population distance on classification accuracy (same notebook) and introduce **intermediate 
-classes** as a way to circumvent the problem of increased assignment error at lower distances ([Fig. 1](https://github.com/SantosJGND/Stats_Lab/blob/master/Complementary_data/Ideo_order_Fst_example.png). In notebook **7** we introduce
+classes** as a way to circumvent the problem of increased assignment error at lower distances ([Fig. 1](https://github.com/SantosJGND/Stats_Lab/blob/master/Complementary_data/Ideo_order_Fst_example.png)). In notebook **7** we introduce
 varying population sizes and numbers, and explore their impact on the projection of samples in PCA space. Notebook **8** extends this study and provides 
 a real life example.
 
@@ -82,7 +82,7 @@ clusters. It is further possible for local clusters to be populated by samples f
 the relative presence of reference samples will affect their assignment through KDE. However, because we are now dealing with structured populations
 we can no longer rely on the *Fst* measure to interpret variation in error rate. This is the reason for the development of the overlap measure.
 
-In notebook **9b** we explore the impact of asymetric overlap of structured populations on both pure and intermediate classification (see notebook **6**).
+In notebook **9b** we explore the impact of asymmetric overlap of structured populations on both pure and intermediate classification (see notebook **6**).
 
 
 - [6. A link to Fst](https://nbviewer.jupyter.org/github/SantosJGND/Genetic-data-analysis/blob/master/6.%20A%20link%20to%20FSTs.ipynb)
@@ -121,6 +121,9 @@ KDE-based assignment of admixed scenarios.
 
 - [13. Outliers and genetic structure](https://nbviewer.jupyter.org/github/SantosJGND/Stats_Lab/blob/master/13.%20Outliers_genetic_structure.ipynb) 
 focuses on the identification of samples from non-reference sources under different structure parameters ([Fig. 4](https://github.com/SantosJGND/Stats_Lab/blob/master/Complementary_data/Supplemental_Figure_S11.png)).
+
+
+## Folders and other directories.
 
 - [/LAI_interface](https://github.com/SantosJGND/Stats_Lab/tree/master/LAI_interface): analysis of simulated samples using Local Ancestry Inference software 
 ([Fig. 5](https://github.com/SantosJGND/Stats_Lab/tree/master/LAI_interface/Supplemental_Figure_S6.png)).
