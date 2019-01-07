@@ -62,11 +62,11 @@ This section deals with organising simulations so as to easily control for popul
 describes the use of PCA to organise allele frequency vectors by genetic proximity, as measured in *Fst* 
 ([Fig. 2](https://github.com/SantosJGND/Stats_Lab/blob/master/Complementary_data/Ideo_comparison.png)).
 
-- [Notebook 7](https://nbviewer.jupyter.org/github/SantosJGND/Genetic-data-analysis/blob/master/8.%20Controlling%20for%20size.ipynb) 
+- [Notebook 7](https://nbviewer.jupyter.org/github/SantosJGND/Stats_Lab/blob/master/7.%20Controlling%20for%20size.ipynb) 
 Describes the relation between the proximity of source populations and euclidian distances of sample projections in PCA space.
 The impact of sample size is studied.
 
-- [Notebook 8](https://nbviewer.jupyter.org/github/SantosJGND/Genetic-data-analysis/blob/master/7.%20Machine%20Learning%20for%20Genomics.ipynb)
+- [Notebook 8](https://nbviewer.jupyter.org/github/SantosJGND/Stats_Lab/blob/master/8.%20Machine%20Learning%20for%20Genomics.ipynb)
 describes the use of PCA to infer genetic distances measured in *Fst*.
 
 - Notebooks [9](https://nbviewer.jupyter.org/github/SantosJGND/Genetic-data-analysis/blob/master/9.%20Conditional_variation.ipynb) 
