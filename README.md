@@ -41,7 +41,7 @@ binomial probability of an event. Allele frequencies *Sk* are drawn from the Bet
 see also Jiang and Cockerham 1990, Sawyer and Hartl 1992 and Williamson *et al.* 2004). Population-specific allele frequency vectors 
 of size *L* are sampled from the Beta distribution at various combinations of mean and variance of this distribution (**1**)
 To the extent that individual variables are assumed to bear the same weight, principal component analysis (PCA) presents an intuitive
-summarisation of population samples (see notebook **6** in the next section). In this context, given a sufficient number of samples, a 
+summarisation of population samples (see notebook **8** in the next section). In this context, given a sufficient number of samples, a 
 basic description of a population entity is the probability density function of its samples in PCA feature space. 
 
 In Notebooks **2**, **3**, **4** and **5**, the use of kernel density estimates ([KDE](https://scikit-learn.org/stable/modules/density.html)) 
@@ -65,15 +65,15 @@ varying population sizes and numbers, and explore their impact on the projection
 a real life example.
 
 Notebooks **9a-b** and **10** explore a particular way of studying population genetic structure. The focus of these notebooks is on capturing the
-degree of overlap between distributions. The description explored, *overlap*, is not one of distance or variance (say *Fst* or ANOVA), but of the extent
+degree of overlap between distributions. The description explored, *overlap*, is not one of distance or variance (like *Fst* or ANOVA), but of the extent
 of distribution space significant to more than one population. In terms of classification, this amounts to a study of error.
 
 **The importance of the overlap measure**
 
-In notebooks **7** and **8** we explored the relation between correlation, distance in PCA space and classification accuracy. We learned that for 
+In notebooks **6** through **8** we explored the relation between correlation, distance in PCA space and classification accuracy. We learned that for 
 two populations this relation is straighforward: error rate presents a gaussian decline with increasing distance (*Fst*) but is positively and linearly
-related to the overlap measure. The reason why this second finding is important is that natural populations are not always neet little blobs of gaussian
-variation. The assumption of this ideal scenario is in fact one limitation of existing approaches in dealing with complex data sets. 
+related to the overlap measure. The reason why this second finding is important is that natural populations are not always neat little blobs of gaussian
+variation. The assumption of this ideal scenario is in fact one limitation in existing approaches in dealing with complex data sets. 
 
 Natural populations can present an important degree of internal substructure. In cases where internal variation does not exceed the variance between 
 reference clusters estimates of deviation from internal centroids can still be informative. However, if substructure is the result of exogenous introgression, 
@@ -81,7 +81,7 @@ then the accompanying increase in internal variance can complicate the assignmen
 analyses become limited to those clusters of variation present in a given data set, all isolated samples being assigned as outliers 
 (see notebook **4**, section I). It is possible for samples from the same reference populations to be unevenly distributed among local 
 clusters. It is further possible for local clusters to be populated by samples from different populations. In this context, we need to know how 
-the relative presence of reference samples will affect their assignment through KDE. However, because we are now dealing with structured populations
+the relative presence of reference samples at a given cluster will affect their assignment through KDE. However, because we are now dealing with structured populations
 we can no longer rely on the *Fst* measure to interpret variation in error rate. This is the reason for the development of the overlap measure.
 
 In notebook **9b** we explore the impact of asymmetric overlap of structured populations on both pure and intermediate classification (see notebook **6**).
