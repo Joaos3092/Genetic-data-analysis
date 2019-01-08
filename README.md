@@ -124,6 +124,32 @@ KDE-based assignment of admixed scenarios.
 focuses on the identification of samples from non-reference sources under different structure parameters ([Fig. 4](https://github.com/SantosJGND/Stats_Lab/blob/master/Complementary_data/Supplemental_Figure_S11.png)).
 
 
+## IV. Naked structure.
+
+Throughout the previous sections the exploration of genetic structure was made through the study of local structured correlations. The focus was on the 
+characterisation of samples relative to the distributions of supervised and unsupervised groups. However, while the use of KDE and of Mean Shift through it 
+provides an accurate description these distributions, and allows for the use of outliers, it does so at the expense of one important element in the 
+description of population genetic data: distance.
+
+Except in the ideal scenario of normal unadmixed populations, the *p*-values derived from KDE cannot be used to infer the actual distances that separate 
+reference groups. Even in that ideal case, our use of kernels would make the inference of distances beyond the threshold of 0.03 *Fst*s extremely imprecise. 
+Why is this limitation allowed?
+
+In the study of natural populations, the likelihood of polyphyly and recurrent genetic exchange, with possible confounding effects on population 
+genetics estimates, is high. This is what led us, in section II, to rely on a measure of *overlap* to study error rate in the classification of samples
+from structured populations. In the context of the analysis of genomic data, where most analyses are automated the problem presented by these occurences for 
+the calculation of genetic distances is that we might be wrong in assuming the identity of the elements we are calculating distances between. This can introduce 
+a considerable amount of variation in our measurements. More importantly, this factor can seriously impact any classification of individual 
+samples reliant on distance measures. This led to the decision of analysing local correlation and distance measurements separately.
+
+More than the previous sections, this section is about exploratory analysis. We will begin by exploring methods to extract and visualise distributions of distances
+between populations. Once again relying heavily on plotly tools, notebook **14** explores how different patterns of genomic structure impact the
+distribution of distances of one focal population to the remainder. notebook **15** shows how this analysis can be guided by the supervised classificaiton
+of samples using KDE. In notebook **16** we develop the targeted analysis of distance to one of structure, treating multiple populations together.
+
+
+
+
 ## Folders and other directories.
 
 - [/LAI_interface](https://github.com/SantosJGND/Stats_Lab/tree/master/LAI_interface): analysis of simulated samples using Local Ancestry Inference software 
