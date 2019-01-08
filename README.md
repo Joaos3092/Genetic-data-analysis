@@ -36,14 +36,16 @@ In the study of the variation of binary data, the simplest assumption is that of
 unit of measurment available. In the case of genetic data, this unit is the single nucleotide polymorphism (SNP).
 
 Througout the notebooks provided, individuals are simulated as samples of *L* binary markers (0, 1, .., i), coded 0 and 1, of frequency *pi* 
-within a given population *K*. Populations were simulated as multivariate Bernoulli variables *Sk*, where each variable *Ski* represents the 
-binomial probability of an event. We further assumed independent markers and modelled the distributions of allele frequencies *Sk* from the 
-Beta distribution (Tataru *et al.* 2017, see also Jiang and Cockerham 1990, Sawyer and Hartl 1992 and Williamson *et al.* 2004). Allele frequency vectors 
-of size *L* were sampled from the Beta distribution for various combinations of mean and variance of this distribution (**1**)
-To the extent that individuals are defined as combinations observations of the same weight, principal component analysis (PCA) presents an intuitive
-summarisation of population samples. In this context, given a sufficient number of samples, a basic description of a population entity is 
-the probability density function of its samples in PCA feature space. In Notebooks **2**, **3**, **4** and **5**, the use of kernel density estimates 
-([KDE](https://scikit-learn.org/stable/modules/density.html)) for the characterisation and assignment of individual samples is explored. 
+within a given population *K*. Populations are simulated as multivariate Bernoulli variables *Sk*, where each variable *Ski* represents the 
+binomial probability of an event. Allele frequencies *Sk* are drawn from the Beta distribution (Tataru *et al.* 2017, 
+see also Jiang and Cockerham 1990, Sawyer and Hartl 1992 and Williamson *et al.* 2004). Population-specific allele frequency vectors 
+of size *L* are sampled from the Beta distribution at various combinations of mean and variance of this distribution (**1**)
+To the extent that individual variables are assumed to bear the same weight, principal component analysis (PCA) presents an intuitive
+summarisation of population samples (see notebook **6** in the next section). In this context, given a sufficient number of samples, a 
+basic description of a population entity is the probability density function of its samples in PCA feature space. 
+
+In Notebooks **2**, **3**, **4** and **5**, the use of kernel density estimates ([KDE](https://scikit-learn.org/stable/modules/density.html)) 
+for the characterisation and assignment of individual samples is explored. 
 
 - [1. Generating samples](https://nbviewer.jupyter.org/github/SantosJGND/Genetic-data-analysis/blob/master/1.%20Generating_haplotypes.ipynb).
 - [2. Local classification](https://nbviewer.jupyter.org/github/SantosJGND/Genetic-data-analysis/blob/master/2.%20Local_classification.ipynb).
@@ -55,7 +57,7 @@ the probability density function of its samples in PCA feature space. In Noteboo
 
 Notebooks: 6 - 11
 
-The study of the relation of different descriptors and population structure requires the analysis of samples from as many different populations
+The study of the relation of different descriptors to population structure requires the analysis of samples from as many different populations
 as possible. In this section we begin by dealing with organising simulations so as to control for correlation (notebook **6**). We then build on
 the infrastructure created to explore the impact of population distance on classification accuracy (same notebook) and introduce **intermediate 
 classes** as a way to circumvent the problem of increased assignment error at lower distances ([Fig. 1](https://github.com/SantosJGND/Stats_Lab/blob/master/Complementary_data/Ideo_order_Fst_example.png)). In notebook **7** we introduce
@@ -84,13 +86,12 @@ we can no longer rely on the *Fst* measure to interpret variation in error rate.
 
 In notebook **9b** we explore the impact of asymmetric overlap of structured populations on both pure and intermediate classification (see notebook **6**).
 
-
 - [6. A link to Fst](https://nbviewer.jupyter.org/github/SantosJGND/Genetic-data-analysis/blob/master/6.%20A%20link%20to%20FSTs.ipynb)
 describes the use of PCA to organise allele frequency vectors by genetic proximity, as measured in *Fst* 
-([Fig. 2](https://github.com/SantosJGND/Stats_Lab/blob/master/Complementary_data/Ideo_comparison.png)).
+([Fig. 2](https://github.com/SantosJGND/Stats_Lab/blob/master/Complementary_data/Ideo_comparison.png)) and introduces intermediate classes.
 
 - [7. Controlling for Size](https://nbviewer.jupyter.org/github/SantosJGND/Stats_Lab/blob/master/7.%20Controlling%20for%20size.ipynb) 
-Describes the relation between the proximity of source populations and euclidian distances of sample projections in PCA space.
+describes the relation between the proximity of source populations and euclidian distances of sample projections in PCA space.
 The impact of sample size is studied.
 
 - [8. Machine learning for Genomics](https://nbviewer.jupyter.org/github/SantosJGND/Stats_Lab/blob/master/8.%20Machine%20Learning%20for%20Genomics.ipynb)
