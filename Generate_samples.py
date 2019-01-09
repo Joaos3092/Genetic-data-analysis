@@ -62,7 +62,7 @@ def Gen_samples(Pops,Sizes,vector_lib,prior_func,prior_kwargs,return_pca= False,
             probs[(probs > 1)]= 1
             probs[(probs < 0)]= 0
             m= Sizes[k]
-            Haps= [[np.random.choice([1,0],p= [1-probs[x],probs[x]]) for x in range(L)] for acc in range(m)]
+            Haps= [[np.random.choice([1,0],p= [1-probs[x],probs[x]]) for x in range(vector_lib.shape[1])] for acc in range(m)]
 
             data.extend(Haps)
 
@@ -163,8 +163,8 @@ def Check_Path(Npops,vector_lib,prior_func,prior_kwargs,Pops= [], random= True,n
     fig= go.Figure(data=fig_data, layout=layout)
     
     if random:
-        return fig, Pops, ID
-    else: return fig, ID
+        return fig, Pops, prior
+    else: return fig, prior
 
 
 

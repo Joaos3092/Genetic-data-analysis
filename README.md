@@ -133,11 +133,11 @@ description of population genetic data: distance.
 
 Except in the ideal scenario of normal unadmixed populations, the *p*-values derived from KDE cannot be used to infer the actual distances that separate 
 reference groups. Even in that ideal case, our use of kernels would make the inference of distances beyond the threshold of 0.03 *Fst*s extremely imprecise. 
-Why is this limitation allowed?
+Why was this limitation allowed?
 
 In the study of natural populations, the likelihood of polyphyly and recurrent genetic exchange, with possible confounding effects on population 
 genetics estimates, is high. This is what led us, in section II, to rely on a measure of *overlap* to study error rate in the classification of samples
-from structured populations. In the context of the analysis of genomic data, where most analyses are automated the problem presented by these occurences for 
+from structured populations. In the context of the analysis of genomic data, where most analyses are automated, the problem presented by these occurences for 
 the calculation of genetic distances is that we might be wrong in assuming the identity of the elements we are calculating distances between. This can introduce 
 a considerable amount of variation in our measurements. More importantly, this factor can seriously impact any classification of individual 
 samples reliant on distance measures. This led to the decision of analysing local correlation and distance measurements separately.
@@ -148,9 +148,16 @@ distribution of distances of one focal population to the remainder. notebook **1
 of samples using KDE. In notebook **16** we develop the targeted analysis of distance to one of structure, treating multiple populations together.
 
 
+- [14. Target distances](https://nbviewer.jupyter.org/github/SantosJGND/Stats_Lab/blob/master/14._Target_distances.ipynb). Study of differentiation between a target
+and a control group. Introduces updated software for the manipulation of structure across data sets.
+
+- [16. Structure vertices](https://nbviewer.jupyter.org/github/SantosJGND/Stats_Lab/blob/master/16._Structure_vertices.ipynb). Study the combination of distances
+that comprise a population structure. Explore use for prediction.
 
 
 ## Folders and other directories.
+
+- **/Dmatrices** and **/Complementary_data** hold Darwin format files for notebook **8** and figures linked to in readme respectively.
 
 - [/LAI_interface](https://github.com/SantosJGND/Stats_Lab/tree/master/LAI_interface): analysis of simulated samples using Local Ancestry Inference software 
 ([Fig. 5](https://github.com/SantosJGND/Stats_Lab/tree/master/LAI_interface/Supplemental_Figure_S6.png)).
