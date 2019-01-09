@@ -47,11 +47,11 @@ basic description of a population entity is the probability density function of 
 In Notebooks **2**, **3**, **4** and **5**, the use of kernel density estimates ([KDE](https://scikit-learn.org/stable/modules/density.html)) 
 for the characterisation and assignment of individual samples is explored. 
 
-- [1. Generating samples](https://nbviewer.jupyter.org/github/SantosJGND/Genetic-data-analysis/blob/master/1.%20Generating_haplotypes.ipynb).
-- [2. Local classification](https://nbviewer.jupyter.org/github/SantosJGND/Genetic-data-analysis/blob/master/2.%20Local_classification.ipynb).
-- [3. Mislabelling](https://nbviewer.jupyter.org/github/SantosJGND/Genetic-data-analysis/blob/master/3.%20Mislabelling.ipynb).
-- [4. Outlier material](https://nbviewer.jupyter.org/github/SantosJGND/Genetic-data-analysis/blob/master/4.%20X-material.ipynb)
-- [5. Visualizing KDE](https://nbviewer.jupyter.org/github/SantosJGND/Genetic-data-analysis/blob/master/5.%20Visualizing%20KDE.ipynb)
+- [1. Generating samples](https://nbviewer.jupyter.org/github/SantosJGND/Genetic-data-analysis/Notebooks/blob/master/1.%20Generating_haplotypes.ipynb).
+- [2. Local classification](https://nbviewer.jupyter.org/github/SantosJGND/Genetic-data-analysis/Notebooks/blob/master/2.%20Local_classification.ipynb).
+- [3. Mislabelling](https://nbviewer.jupyter.org/github/SantosJGND/Genetic-data-analysis/Notebooks/blob/master/3.%20Mislabelling.ipynb).
+- [4. Outlier material](https://nbviewer.jupyter.org/github/SantosJGND/Genetic-data-analysis/Notebooks/blob/master/4.%20X-material.ipynb)
+- [5. Visualizing KDE](https://nbviewer.jupyter.org/github/SantosJGND/Genetic-data-analysis/Notebooks/blob/master/5.%20Visualizing%20KDE.ipynb)
 
 ## II. Population structure.
 
@@ -86,23 +86,23 @@ we can no longer rely on the *Fst* measure to interpret variation in error rate.
 
 In notebook **9b** we explore the impact of asymmetric overlap of structured populations on both pure and intermediate classification (see notebook **6**).
 
-- [6. A link to Fst](https://nbviewer.jupyter.org/github/SantosJGND/Genetic-data-analysis/blob/master/6.%20A%20link%20to%20FSTs.ipynb)
+- [6. A link to Fst](https://nbviewer.jupyter.org/github/SantosJGND/Genetic-data-analysis/Notebooks/blob/master/6.%20A%20link%20to%20FSTs.ipynb)
 describes the use of PCA to organise allele frequency vectors by genetic proximity, as measured in *Fst* 
 ([Fig. 2](https://github.com/SantosJGND/Stats_Lab/blob/master/Complementary_data/Ideo_comparison.png)) and introduces intermediate classes.
 
-- [7. Controlling for Size](https://nbviewer.jupyter.org/github/SantosJGND/Stats_Lab/blob/master/7.%20Controlling%20for%20size.ipynb) 
+- [7. Controlling for Size](https://nbviewer.jupyter.org/github/SantosJGND/Stats_Lab/Notebooks/blob/master/7.%20Controlling%20for%20size.ipynb) 
 describes the relation between the proximity of source populations and euclidian distances of sample projections in PCA space.
 The impact of sample size is studied.
 
-- [8. Machine learning for Genomics](https://nbviewer.jupyter.org/github/SantosJGND/Stats_Lab/blob/master/8.%20Machine%20Learning%20for%20Genomics.ipynb)
+- [8. Machine learning for Genomics](https://nbviewer.jupyter.org/github/SantosJGND/Stats_Lab/Notebooks/blob/master/8.%20Machine%20Learning%20for%20Genomics.ipynb)
 describes the use of PCA to infer genetic distances measured in *Fst*.
 
-- [9. Conditional variation](https://nbviewer.jupyter.org/github/SantosJGND/Genetic-data-analysis/blob/master/9.%20Conditional_variation.ipynb) 
+- [9. Conditional variation](https://nbviewer.jupyter.org/github/SantosJGND/Genetic-data-analysis/Notebooks/blob/master/9.%20Conditional_variation.ipynb) 
 and [9b. Conditional Var, but with Pops](https://nbviewer.jupyter.org/github/SantosJGND/Genetic-data-analysis/blob/master/9b.%20Conditional_Var%2C%20but%20using%20Pops.ipynb) 
 describe the use of KDE to extract a measure of distribution overlap. 
 
-- [10. Indexing MS](https://nbviewer.jupyter.org/github/SantosJGND/Genetic-data-analysis/blob/master/10.%20Indexing_MS.ipynb) 
-and [11. Visualising overlap](https://nbviewer.jupyter.org/github/SantosJGND/Genetic-data-analysis/blob/master/11.%20Visualising%20Overlaps.ipynb) 
+- [10. Indexing MS](https://nbviewer.jupyter.org/github/SantosJGND/Genetic-data-analysis/Notebooks/blob/master/10.%20Indexing_MS.ipynb) 
+and [11. Visualising overlap](https://nbviewer.jupyter.org/github/SantosJGND/Genetic-data-analysis/Notebooks/blob/master/11.%20Visualising%20Overlaps.ipynb) 
 explore the behaviour of Mean Shift classification under different patterns of structure.
 
 
@@ -114,13 +114,13 @@ This section extends on the analyses in Notebooks 2 through 5. The use of the KD
 of samples in scenarios containing outliers and cases of mislabelling is explored. However, here we will build on the infrastructure
 developed in Section II to compare classification output across structure and admixture scenarios.
 
-- [12a. Admixture simulations](https://nbviewer.jupyter.org/github/SantosJGND/Genetic-data-analysis/blob/master/12a.%20Admixture%20simulations.ipynb) 
+- [12a. Admixture simulations](https://nbviewer.jupyter.org/github/SantosJGND/Genetic-data-analysis/Notebooks/blob/master/12a.%20Admixture%20simulations.ipynb) 
 introduces individual IDs and admixture proportions to combine admixture and genetic structure ([Fig. 3](https://github.com/SantosJGND/Stats_Lab/blob/master/Complementary_data/3way_example.png)).
 
-- [12b. Infering Admixed](https://nbviewer.jupyter.org/github/SantosJGND/Stats_Lab/blob/master/12b.%20Inference_Admixed.ipynb) 
+- [12b. Infering Admixed](https://nbviewer.jupyter.org/github/SantosJGND/Stats_Lab/Notebooks/blob/master/12b.%20Inference_Admixed.ipynb) 
 KDE-based assignment of admixed scenarios.
 
-- [13. Outliers and genetic structure](https://nbviewer.jupyter.org/github/SantosJGND/Stats_Lab/blob/master/13.%20Outliers_genetic_structure.ipynb) 
+- [13. Outliers and genetic structure](https://nbviewer.jupyter.org/github/SantosJGND/Stats_Lab/Notebooks/blob/master/13.%20Outliers_genetic_structure.ipynb) 
 focuses on the identification of samples from non-reference sources under different structure parameters ([Fig. 4](https://github.com/SantosJGND/Stats_Lab/blob/master/Complementary_data/Supplemental_Figure_S11.png)).
 
 
@@ -148,14 +148,16 @@ distribution of distances of one focal population to the remainder. notebook **1
 of samples using KDE. In notebook **16** we develop the targeted analysis of distance to one of structure, treating multiple populations together.
 
 
-- [14. Target distances](https://nbviewer.jupyter.org/github/SantosJGND/Stats_Lab/blob/master/14._Target_distances.ipynb). Study of differentiation between a target
+- [14. Target distances](https://nbviewer.jupyter.org/github/SantosJGND/Stats_Lab/Notebooks/blob/master/14._Target_distances.ipynb). Study of differentiation between a target
 and a control group. Introduces updated software for the manipulation of structure across data sets.
 
-- [16. Structure vertices](https://nbviewer.jupyter.org/github/SantosJGND/Stats_Lab/blob/master/16._Structure_vertices.ipynb). Study the combination of distances
+- [16. Structure vertices](https://nbviewer.jupyter.org/github/SantosJGND/Stats_Lab/Notebooks/blob/master/16._Structure_vertices.ipynb). Study the combination of distances
 that comprise a population structure. Explore use for prediction.
 
 
 ## Folders and other directories.
+
+- **/Notebooks** jupyter notebooks.
 
 - **/Dmatrices** and **/Complementary_data** hold Darwin format files for notebook **8** and figures linked to in readme respectively.
 
