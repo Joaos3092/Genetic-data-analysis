@@ -98,7 +98,7 @@ The impact of sample size is studied.
 describes the use of PCA to infer genetic distances measured in *Fst*.
 
 - [9. Conditional variation](https://nbviewer.jupyter.org/github/SantosJGND/Genetic-data-analysis/blob/master/Notebooks/9.%20Conditional_variation.ipynb) 
-and [9b. Conditional Var, but with Pops](https://nbviewer.jupyter.org/github/SantosJGND/Genetic-data-analysis/blob/master/9b.%20Conditional_Var%2C%20but%20using%20Pops.ipynb) 
+and [9b. Conditional Var, but with Pops](https://nbviewer.jupyter.org/github/SantosJGND/Genetic-data-analysis/blob/master/Notebooks/9b.%20Conditional_Var%2C%20but%20using%20Pops.ipynb) 
 describe the use of KDE to extract a measure of distribution overlap. 
 
 - [10. Indexing MS](https://nbviewer.jupyter.org/github/SantosJGND/Genetic-data-analysis/blob/master/Notebooks/10.%20Indexing_MS.ipynb) 
