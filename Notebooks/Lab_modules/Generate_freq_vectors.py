@@ -37,12 +37,12 @@ def generate_vectors_Beta(L,n,rangeA= [1,2],rangeB = [.1,4],steps= 20,n_comp = 1
     n_comp = 100
 
     
-    return vector_lib
+    return vector_lib, background_1
 
     
 def generate_Branches_Beta(Nbranches,density,L,n,rangeA= [1,2],rangeB = [.1,4],steps= 20,n_comp = 100):
     
-    vector_lib= generate_vectors_Beta(L,n,rangeA,rangeB,steps,n_comp)
+    vector_lib, background= generate_vectors_Beta(L,n,rangeA,rangeB,steps,n_comp)
     
     pca = PCA(n_components=n_comp, whiten=False,svd_solver='randomized').fit(vector_lib)
     features = pca.transform(vector_lib)# * pca.explained_variance_ratio_

@@ -21,8 +21,10 @@ def recursively_default_dict():
         return collections.defaultdict(recursively_default_dict)
 
 
-######################################################################################
-### Load data 
+###################################################################################
+####  Load data  #######################################################################
+## ##############
+
 
 def read_refs(index_file):
     indxs = recursively_default_dict()

@@ -20,7 +20,7 @@ greater part by the need to study the relation between statistics that describe 
 across fields of research. Here, the focus is on the description of genetic data and on phased SNP data in particular. 
 
 Use NBviewer directly to explore the [notebook library](https://nbviewer.jupyter.org/github/SantosJGND/Genetic-data-analysis/tree/master/). 
-[NBviewer](https://nbviewer.jupyter.org/) supports the 2D images produced in the scripts (copy-paste the url of a notebook onto the tab provided).
+[NBviewer](https://nbviewer.jupyter.org/) supports the 2D and 3D images produced in the scripts (copy-paste the url of a notebook onto the tab provided).
 
 
 ## I. Binary samples. Population distribution and identification.
@@ -137,7 +137,7 @@ Why was this limitation allowed?
 
 In the study of natural populations, the likelihood of polyphyly and recurrent genetic exchange, with possible confounding effects on population 
 genetics estimates, is high. This is what led us, in section II, to rely on a measure of *overlap* to study error rate in the classification of samples
-from structured populations. In the context of the analysis of genomic data, where most analyses are automated, the problem presented by these occurences for 
+from structured populations. In the context of the analysis of genomic data, where most analyses are automated, the problem presented by these occurrences for 
 the calculation of genetic distances is that we might be wrong in assuming the identity of the elements we are calculating distances between. This can introduce 
 a considerable amount of variation in our measurements. More importantly, this factor can seriously impact any classification of individual 
 samples reliant on distance measures. This led to the decision of analysing local correlation and distance measurements separately.

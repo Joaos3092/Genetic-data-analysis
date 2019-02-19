@@ -28,6 +28,27 @@ def recursively_default_dict():
 ### Load data 
 
 
+def read_selected(filename,CHR= 'CHR',start= 'start',end='end',ID= 'ID'):
+    d= 0
+    
+    Genes= recursively_default_dict()
+    
+    Input= open(filename,'r')
+    for line in Input:
+        if d== 0:
+            Names= line.strip().split()
+            cols= {
+                line[x]:x for x in range(len(line))
+            }
+            d += 1
+            continue
+        
+        line= line.strip().split()
+        Genes[line[cols[CHR]]][int(line[cols[start]])]= [int(line[cols[end]]), line[cols[ID]]]
+    
+    return Genes
+
+
 def FAMread(Famfile):
     '''
     reads plink .fam file for names of accesssions in geneo file.
@@ -91,7 +112,7 @@ def BIMread(bimFile):
             d = 0
             CHR = int(line[0])
         Nsnps[CHR][d] = [float(line[3]),line[4],line[5]]
-        if float(line[3]) in Gindex[CHR].keys():
+        if float(line[3]) in Gindex[CHR].keys(): # this turns repeated SNPs to floats .5 bp up. 
             Gindex[CHR][float(line[3]) + .5] = [d]
         else:
             Gindex[CHR][float(line[3])] = [d]
