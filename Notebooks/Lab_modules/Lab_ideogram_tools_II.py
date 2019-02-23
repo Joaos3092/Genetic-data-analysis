@@ -396,13 +396,16 @@ def Merge_class_mix(Ref_profiles,focus_indicies,Out,Diff_threshold,X_threshold):
 #########################################################
 ### Ideogram Processing
 
-def compress_ideo(df,chromosome_list):
-    
+
+def compress_ideo(df,chromosome_list, Out):
+    '''
+    Merge neighboring windows of the same class individual-wise. Returns pandas df.
+    '''
     new_set = []
     
     for CHR in range(len(chromosome_list)):
         
-        Chr = int(re.search('Region_(.+?)_',chromosome_list[CHR]).group(1))
+        Chr = int(re.search('chr(.+?)_',chromosome_list[CHR]).group(1))
         sub = df[df.chrom == chromosome_list[CHR]]
         Coordinates = sorted(sub.start)
         Size = sub.shape[0]
@@ -466,7 +469,7 @@ def chromosome_collections(df, y_positions, height,  **kwargs):
         del df['width']
 
 
-def return_ideogram(ideo, out= True):
+def return_ideogram(ideo, chromosome_list,ID,out= True,height=30,width= 10):
     # Height of each ideogram
     chrom_height = 1
 
@@ -533,7 +536,7 @@ def return_ideogram(ideo, out= True):
     ideo['width'] = ideo.end - ideo.start
 
     # Width, height (in inches)
-    figsize = (10, 30)
+    figsize = (width, height)
 
     fig = plt.figure(figsize=figsize)
     ax = fig.add_subplot(111)
@@ -554,7 +557,6 @@ def return_ideogram(ideo, out= True):
     ax.set_yticklabels(chromosome_list, fontsize = 5)
     ax.axis('tight')
     if out == True:
-        plt.savefig('Ideo_step_' + '_OutlierTh' + str(Outlier_threshold) + '_Z' +str(Comparison_threshold)+ '.png',bbox_inches = 'tight')
+        plt.savefig('Ideo_step_' + '_' + ID + '.png',bbox_inches = 'tight')
     return fig
-
 
