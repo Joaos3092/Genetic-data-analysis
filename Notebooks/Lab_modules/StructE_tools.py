@@ -499,10 +499,9 @@ def extract_profiles_union(global_data,target_ind_dict,threshold,P):
 
 
 #### reference KDE
-
 def extract_profiles(global_data,target_ind_dict):
     ## estimate the bandwith
-    params = {'bandwidth': np.linspace(np.min(global_data), np.max(global_data),20)}
+    params = {'bandwidth': np.linspace(np.min(global_data), np.max(global_data),30)}
     grid = GridSearchCV(KernelDensity(algorithm = "ball_tree",breadth_first = False), params,verbose=0)
     
     cluster_profiles= {x:[] for x in target_ind_dict.keys()}

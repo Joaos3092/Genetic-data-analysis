@@ -33,7 +33,7 @@ on the description of the laws that govern the generation of new data. This desc
 of all variables available to describe the subject of study. 
 
 In the study of the variation of binary data, the simplest assumption is that of a binomial probability of observation at the smallest 
-unit of measurment available. In the case of genetic data, this unit is the single nucleotide polymorphism (SNP).
+unit of measurement  available. In the case of genetic data, this unit is the single nucleotide polymorphism (SNP).
 
 Througout the notebooks provided, individuals are simulated as samples of *L* binary markers (0, 1, .., i), coded 0 and 1, of frequency *pi* 
 within a given population *K*. Populations are simulated as multivariate Bernoulli variables *Sk*, where each variable *Ski* represents the 
