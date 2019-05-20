@@ -10,7 +10,7 @@ def recursively_default_dict():
         return collections.defaultdict(recursively_default_dict)
 
 
-import StructE_tools as Ste
+import Lab_modules.StructE_tools as Ste
 
 
 ###
@@ -172,19 +172,19 @@ def plot_GenFst(Fst_lib,Npops,Chr):
     
     fig_data= [go.Scatter(
     x= [x for x in Fst_lib[1].keys()],
-    y= [Fst_windows[1][x].fst[i] for x in Fst_windows[1].keys()],
+    y= [Fst_lib[1][x].fst[i] for x in Fst_lib[1].keys()],
     mode= 'markers',
     name= '{}'.format([x for x in it.combinations(range(Npops),2)][i])
     ) for i in range(len([x for x in it.combinations(range(Npops),2)]))
     ]
 
     layout = go.Layout(
-        title= 'Fst vs. distance in vector feature space',
+        title= 'Pairwise structure',
         yaxis=dict(
-            title='fsts',
+            title='fst values',
             range= [0,.5]),
         xaxis=dict(
-            title='eucledian distance in feature space')
+            title='data sets')
     )
 
     fig= go.Figure(data=fig_data, layout=layout)

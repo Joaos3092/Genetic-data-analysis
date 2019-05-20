@@ -8,7 +8,7 @@ import plotly.graph_objs as go
 from plotly import tools
 from plotly.offline import iplot
 
-from Lab_modules.vcf_geno_tools_I import check_densities
+from Lab_modules.vcf_geno_tools import check_densities
 
 
 def Struct_subplots_lib(Struct_lib,vector_lib,Fsts_test,Npops= 4,Ncols= 2,range_diff= [0,10],func= 'prior_func',kwargs= 'prior_kwargs',xaxis= '',yaxis= '',title= ''):
